@@ -55,10 +55,10 @@ class DataLoader(object):
         else :
             batch_size = 2048
         self.num_examples = len(data)
-
-        # chunk into batches
-        data = [data[i:i+batch_size] for i in range(0, len(data), batch_size)]
         self.data = data
+        
+        # chunk into batches
+        self.batchfied_data = [data[i:i+batch_size] for i in range(0, len(data), batch_size)]
 
     @classmethod
     def loadfromdata(cls, data, filename, batch_size, opt, evaluation):
@@ -68,10 +68,11 @@ class DataLoader(object):
         dataloader.eval = evaluation
         dataloader.filename  = filename # 'Food-Kitchen'
         
-        dataloader.opt["source_item_num"] = dataloader.read_item("dataset/" + filename + "/Alist.txt")
-        dataloader.opt["target_item_num"] = dataloader.read_item("dataset/" + filename + "/Blist.txt")
+        opt["source_item_num"] = dataloader.read_item("dataset/" + filename + "/Alist.txt")
+        opt["target_item_num"] = dataloader.read_item("dataset/" + filename + "/Blist.txt")
         
-        # shuffle for training
+     
+        #shuffle for training
         if evaluation == -1:
             indices = list(range(len(data)))
             random.shuffle(indices)
@@ -85,10 +86,10 @@ class DataLoader(object):
         else :
             batch_size = 2048
         dataloader.num_examples = len(data)
+        dataloader.data = data 
 
         # chunk into batches
-        data = [data[i:i+batch_size] for i in range(0, len(data), batch_size)]
-        dataloader.data = data 
+        dataloader.batchfied_data = [data[i:i+batch_size] for i in range(0, len(data), batch_size)]
         
         return dataloader
 
@@ -117,7 +118,6 @@ class DataLoader(object):
                 for r in res:
                     res_2.append(r[0])
                 train_data.append(res_2)
-        print(train_data)
         return train_data
 
     def read_test_data(self, test_file):
@@ -376,22 +376,25 @@ class DataLoader(object):
         return processed
 
     def __len__(self):
-        return len(self.data)
+        return len(self.batchfied_data)
 
     def __getitem__(self, key):
         """ Get a batch with index. """
         if not isinstance(key, int):
             raise TypeError
-        if key < 0 or key >= len(self.data):
+        if key < 0 or key >= len(self.batchfied_data):
             raise IndexError
-        batch = self.data[key]
+        batch = self.batchfied_data[key]
         batch_size = len(batch)
+        # print(batch_size)
+        # print(batch[0].shape)
         if self.eval!=-1:
             batch = list(zip(*batch))
             return (torch.LongTensor(batch[0]), torch.LongTensor(batch[1]), torch.LongTensor(batch[2]), torch.LongTensor(batch[3]),torch.LongTensor(batch[4]), torch.LongTensor(batch[5]), torch.LongTensor(batch[6]), torch.LongTensor(batch[7]),torch.LongTensor(batch[8]), torch.LongTensor(batch[9]), torch.LongTensor(batch[10]))
         else :
             batch = list(zip(*batch))
-
+            # print(len(batch))
+            # print(batch[0], batch[1])
             return (torch.LongTensor(batch[0]), torch.LongTensor(batch[1]), torch.LongTensor(batch[2]), torch.LongTensor(batch[3]),torch.LongTensor(batch[4]), torch.LongTensor(batch[5]), torch.LongTensor(batch[6]), torch.LongTensor(batch[7]),torch.LongTensor(batch[8]), torch.LongTensor(batch[9]), torch.LongTensor(batch[10]), torch.LongTensor(batch[11]), torch.LongTensor(batch[12]), torch.LongTensor(batch[13]), torch.LongTensor(batch[14]), torch.LongTensor(batch[15]), torch.LongTensor(batch[16]), torch.LongTensor(batch[17]))
 
     def __iter__(self):

@@ -48,7 +48,7 @@ def read_data(fname):
     print()
     print()
 
-dataset = "Food-Kitchen"
+dataset = "dataset/Food-Kitchen"
 # dataset = "Movie-Book"
 # dataset = "Entertainment-Education"
 

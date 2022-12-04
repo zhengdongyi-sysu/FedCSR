@@ -147,6 +147,7 @@ class CDSRTrainer(Trainer):
         self.model.graph_convolution()
 
         seq, x_seq, y_seq, position, x_position, y_position, ground, share_x_ground, share_y_ground, x_ground, y_ground, ground_mask, share_x_ground_mask, share_y_ground_mask, x_ground_mask, y_ground_mask, corru_x, corru_y = self.unpack_batch(batch)
+        #print(seq.shape, x_seq.shape, y_seq.shape, position.shape, x_position.shape, y_position.shape)
         seqs_fea, x_seqs_fea, y_seqs_fea = self.model(seq, x_seq, y_seq, position, x_position, y_position)
 
         corru_x_fea = self.model.false_forward(corru_x, position)

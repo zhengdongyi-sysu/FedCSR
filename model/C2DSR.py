@@ -78,7 +78,9 @@ class ATTENTION(torch.nn.Module):
         # positions = np.tile(np.array(range(log_seqs.shape[1])), [log_seqs.shape[0], 1])
         seqs += self.pos_emb(position)
         seqs = self.emb_dropout(seqs)
+ 
 
+        #timeline_mask = torch.BoolTensor(seqs_data == torch.tensor(self.opt["itemnum"] - 1))
         timeline_mask = torch.BoolTensor(seqs_data.cpu() == self.opt["itemnum"] - 1)
         if self.opt["cuda"]:
             timeline_mask = timeline_mask.cuda()
