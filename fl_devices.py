@@ -48,7 +48,7 @@ class Client(object):
         # train_stats = train_op(self.model, self.train_loader if not loader else loader, self.optimizer, epochs)
         train_loss = 0
         self.trainer.mi_loss = 0
-        for epoch in (1, epochs + 1):
+        for epoch in range(1, epochs + 1):
             train_dataloader = self.train_dataloader
             for batch in train_dataloader:
                 # 遍历一次dataloader需要45个batch
