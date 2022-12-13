@@ -108,10 +108,10 @@ class DataLoader(object):
             train_data = []
             for id, line in enumerate(infile):
                 res = []
-
                 line = line.strip().split("\t")[2:]
                 for w in line:
                     w = w.split("|")
+                    # print(w)
                     res.append((int(w[0]), int(w[1])))
                 res.sort(key=takeSecond)
                 res_2 = []
