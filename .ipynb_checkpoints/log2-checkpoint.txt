@@ -1,0 +1,55 @@
+nohup: ignoring input
+Config saved to file ./saved_models/00/config.json
+
+Running with the following configs:
+	data_dir : Food-Kitchen
+	split : both
+	model : C2DSR
+	hidden_units : 256
+	num_blocks : 2
+	num_heads : 1
+	GNN : 1
+	dropout : 0.3
+	optim : adam
+	lr : 0.001
+	lr_decay : 1
+	weight_decay : 0.0005
+	decay_epoch : 5
+	max_grad_norm : 5.0
+	leakey : 0.1
+	maxlen : 15
+	cpu : False
+	cuda : True
+	lambda : 0.7
+	epochs : 20
+	batch_size : 256
+	log_step : 200
+	log : logs.txt
+	save_epoch : 100
+	save_dir : ./saved_models
+	id : 00
+	seed : 2040
+	load : False
+	model_file : None
+	info : 
+	undebug : False
+	n_clients : 10
+	local_epoch : 3
+	eval_interval : 1
+	frac : 1.0
+	log_dir : log
+	preprocess : True
+	model_save_dir : ./saved_models/00
+
+
+Loading data from Food-Kitchen with batch size 256...
+/code/FedC2DSR_hier/data_utils.py:62: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  valid_data = np.array(valid_data)[valid_indices]
+/code/FedC2DSR_hier/data_utils.py:63: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  test_data = np.array(test_data)[test_indices]
+Data loading done!
+/code/FedC2DSR_hier/utils/GraphMaker.py:12: RuntimeWarning: divide by zero encountered in power
+  r_inv = np.power(rowsum, -1).flatten()
+real graph loaded!
+graph loaded!
+  0%|                                                                                                                                                                             | 0/10 [00:00<?, ?it/s]

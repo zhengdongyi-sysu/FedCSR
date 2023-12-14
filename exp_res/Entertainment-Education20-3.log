@@ -1,0 +1,689 @@
+Config saved to file ./saved_models/00/config.json
+
+Running with the following configs:
+	data_dir : Entertainment-Education
+	model : C2DSR
+	hidden_units : 256
+	num_blocks : 2
+	num_heads : 1
+	GNN : 1
+	dropout : 0.2
+	optim : adam
+	lr : 0.001
+	lr_decay : 1
+	weight_decay : 0.0005
+	decay_epoch : 5
+	max_grad_norm : 5.0
+	leakey : 0.1
+	maxlen : 15
+	cpu : False
+	cuda : True
+	lambda : 0.7
+	num_iter : 20
+	batch_size : 256
+	log_step : 200
+	log : logs.txt
+	save_epoch : 100
+	save_dir : ./saved_models
+	id : 00
+	seed : 2040
+	load : False
+	model_file : None
+	info : 
+	undebug : False
+	n_clients : 10
+	local_epoch : 3
+	eval_interval : 1
+	frac : 1.0
+	model_save_dir : ./saved_models/00
+
+
+Loading data from Entertainment-Education with batch size 256...
+Data loading done!
+/root/ZhangHongYu/C2DSR_src/utils/GraphMaker.py:12: RuntimeWarning: divide by zero encountered in power
+  r_inv = np.power(rowsum, -1).flatten()
+real graph loaded!
+graph loaded!
+Start training:
+client: 0, 2022-12-06 05:48:31.357667: step 3/600 (round 1/20), loss = 11.068677 (1.441 sec/epoch), lr: 0.001000
+mi: 2.4810190796852116
+client: 1, 2022-12-06 05:48:32.569611: step 6/600 (round 1/20), loss = 11.259808 (1.212 sec/epoch), lr: 0.001000
+mi: 2.588741755485535
+client: 2, 2022-12-06 05:48:33.795790: step 9/600 (round 1/20), loss = 11.248925 (1.226 sec/epoch), lr: 0.001000
+mi: 2.4773006916046145
+client: 3, 2022-12-06 05:48:35.022712: step 12/600 (round 1/20), loss = 11.195256 (1.227 sec/epoch), lr: 0.001000
+mi: 2.4828504085540777
+client: 4, 2022-12-06 05:48:36.223352: step 15/600 (round 1/20), loss = 11.199126 (1.200 sec/epoch), lr: 0.001000
+mi: 2.6670960545539857
+client: 5, 2022-12-06 05:48:37.427470: step 18/600 (round 1/20), loss = 11.360549 (1.204 sec/epoch), lr: 0.001000
+mi: 2.6979165315628055
+client: 6, 2022-12-06 05:48:38.666687: step 21/600 (round 1/20), loss = 11.278275 (1.239 sec/epoch), lr: 0.001000
+mi: 2.5521831035614015
+client: 7, 2022-12-06 05:48:39.846195: step 24/600 (round 1/20), loss = 11.108653 (1.179 sec/epoch), lr: 0.001000
+mi: 2.50468237400055
+client: 8, 2022-12-06 05:48:41.007153: step 27/600 (round 1/20), loss = 11.369706 (1.161 sec/epoch), lr: 0.001000
+mi: 2.636832237243653
+client: 9, 2022-12-06 05:48:42.184242: step 30/600 (round 1/20), loss = 11.083751 (1.177 sec/epoch), lr: 0.001000
+mi: 2.5829567670822144
+Evaluating on dev set...
+client: 0,  val round:1, time: 12.564867(s), X (MRR: 0.0155, NDCG@10: 0.0123, HR@10: 0.0218), Y (MRR: 0.0101, NDCG@10: 0.0102, HR@10: 0.0302)
+client: 1,  val round:1, time: 13.005814(s), X (MRR: 0.0162, NDCG@10: 0.0127, HR@10: 0.0219), Y (MRR: 0.0152, NDCG@10: 0.0106, HR@10: 0.0200)
+client: 2,  val round:1, time: 13.444559(s), X (MRR: 0.0184, NDCG@10: 0.0190, HR@10: 0.0415), Y (MRR: 0.0179, NDCG@10: 0.0160, HR@10: 0.0348)
+client: 3,  val round:1, time: 13.886078(s), X (MRR: 0.0113, NDCG@10: 0.0094, HR@10: 0.0246), Y (MRR: 0.0167, NDCG@10: 0.0157, HR@10: 0.0294)
+client: 4,  val round:1, time: 14.324304(s), X (MRR: 0.0207, NDCG@10: 0.0190, HR@10: 0.0337), Y (MRR: 0.0206, NDCG@10: 0.0148, HR@10: 0.0205)
+client: 5,  val round:1, time: 14.766180(s), X (MRR: 0.0178, NDCG@10: 0.0169, HR@10: 0.0345), Y (MRR: 0.0085, NDCG@10: 0.0053, HR@10: 0.0146)
+client: 6,  val round:1, time: 15.204102(s), X (MRR: 0.0178, NDCG@10: 0.0174, HR@10: 0.0380), Y (MRR: 0.0233, NDCG@10: 0.0207, HR@10: 0.0370)
+client: 7,  val round:1, time: 15.649812(s), X (MRR: 0.0227, NDCG@10: 0.0210, HR@10: 0.0393), Y (MRR: 0.0212, NDCG@10: 0.0239, HR@10: 0.0588)
+client: 8,  val round:1, time: 16.097915(s), X (MRR: 0.0131, NDCG@10: 0.0098, HR@10: 0.0225), Y (MRR: 0.0140, NDCG@10: 0.0120, HR@10: 0.0284)
+client: 9,  val round:1, time: 16.541290(s), X (MRR: 0.0115, NDCG@10: 0.0058, HR@10: 0.0100), Y (MRR: 0.0177, NDCG@10: 0.0183, HR@10: 0.0419)
+average round:1, time: 16.759397(s), X (MRR: 0.0165, NDCG@10: 0.0143, HR@10: 0.0288), Y (MRR: 0.0165, NDCG@10: 0.0147, HR@10: 0.0316)
+client: 0, 2022-12-06 05:48:47.872695: step 33/600 (round 2/20), loss = 11.638348 (1.237 sec/epoch), lr: 0.001000
+mi: 2.5020514488220216
+client: 1, 2022-12-06 05:48:49.101260: step 36/600 (round 2/20), loss = 11.554473 (1.228 sec/epoch), lr: 0.001000
+mi: 2.49158525466919
+client: 2, 2022-12-06 05:48:50.315841: step 39/600 (round 2/20), loss = 11.500241 (1.214 sec/epoch), lr: 0.001000
+mi: 2.5495468616485604
+client: 3, 2022-12-06 05:48:51.503176: step 42/600 (round 2/20), loss = 11.545770 (1.187 sec/epoch), lr: 0.001000
+mi: 2.5665210962295535
+client: 4, 2022-12-06 05:48:52.695246: step 45/600 (round 2/20), loss = 11.764240 (1.192 sec/epoch), lr: 0.001000
+mi: 2.5026322126388547
+client: 5, 2022-12-06 05:48:53.871720: step 48/600 (round 2/20), loss = 11.750741 (1.176 sec/epoch), lr: 0.001000
+mi: 2.5235404968261723
+client: 6, 2022-12-06 05:48:55.060647: step 51/600 (round 2/20), loss = 11.735033 (1.189 sec/epoch), lr: 0.001000
+mi: 2.52577737569809
+client: 7, 2022-12-06 05:48:56.251355: step 54/600 (round 2/20), loss = 11.420029 (1.191 sec/epoch), lr: 0.001000
+mi: 2.5223464965820312
+client: 8, 2022-12-06 05:48:57.401991: step 57/600 (round 2/20), loss = 11.718198 (1.150 sec/epoch), lr: 0.001000
+mi: 2.502325904369355
+client: 9, 2022-12-06 05:48:58.553944: step 60/600 (round 2/20), loss = 11.473185 (1.152 sec/epoch), lr: 0.001000
+mi: 2.516408967971802
+Evaluating on dev set...
+client: 0,  val round:2, time: 28.932060(s), X (MRR: 0.1999, NDCG@10: 0.2301, HR@10: 0.3811), Y (MRR: 0.2128, NDCG@10: 0.2537, HR@10: 0.4322)
+client: 1,  val round:2, time: 29.369485(s), X (MRR: 0.1774, NDCG@10: 0.2065, HR@10: 0.3528), Y (MRR: 0.2487, NDCG@10: 0.2802, HR@10: 0.4200)
+client: 2,  val round:2, time: 29.812179(s), X (MRR: 0.1906, NDCG@10: 0.2206, HR@10: 0.3756), Y (MRR: 0.2319, NDCG@10: 0.2637, HR@10: 0.4129)
+client: 3,  val round:2, time: 30.250014(s), X (MRR: 0.1773, NDCG@10: 0.2050, HR@10: 0.3538), Y (MRR: 0.2767, NDCG@10: 0.3127, HR@10: 0.4657)
+client: 4,  val round:2, time: 30.692479(s), X (MRR: 0.1886, NDCG@10: 0.2204, HR@10: 0.3750), Y (MRR: 0.2270, NDCG@10: 0.2645, HR@10: 0.4308)
+client: 5,  val round:2, time: 31.128621(s), X (MRR: 0.1807, NDCG@10: 0.2083, HR@10: 0.3522), Y (MRR: 0.2628, NDCG@10: 0.3069, HR@10: 0.4780)
+client: 6,  val round:2, time: 31.572138(s), X (MRR: 0.2063, NDCG@10: 0.2298, HR@10: 0.3620), Y (MRR: 0.2421, NDCG@10: 0.2744, HR@10: 0.4259)
+client: 7,  val round:2, time: 32.011032(s), X (MRR: 0.1798, NDCG@10: 0.2069, HR@10: 0.3538), Y (MRR: 0.2641, NDCG@10: 0.3055, HR@10: 0.4755)
+client: 8,  val round:2, time: 32.447636(s), X (MRR: 0.1919, NDCG@10: 0.2246, HR@10: 0.3775), Y (MRR: 0.2197, NDCG@10: 0.2522, HR@10: 0.4028)
+client: 9,  val round:2, time: 32.887789(s), X (MRR: 0.1809, NDCG@10: 0.2096, HR@10: 0.3557), Y (MRR: 0.2548, NDCG@10: 0.2924, HR@10: 0.4465)
+average round:2, time: 33.111353(s), X (MRR: 0.1873, NDCG@10: 0.2162, HR@10: 0.3640), Y (MRR: 0.2441, NDCG@10: 0.2806, HR@10: 0.4390)
+client: 0, 2022-12-06 05:49:04.141873: step 63/600 (round 3/20), loss = 9.663381 (1.154 sec/epoch), lr: 0.001000
+mi: 3.1071652293205267
+client: 1, 2022-12-06 05:49:05.293571: step 66/600 (round 3/20), loss = 9.663920 (1.152 sec/epoch), lr: 0.001000
+mi: 3.4239786386489874
+client: 2, 2022-12-06 05:49:06.448404: step 69/600 (round 3/20), loss = 9.583108 (1.155 sec/epoch), lr: 0.001000
+mi: 3.1524930953979493
+client: 3, 2022-12-06 05:49:07.609708: step 72/600 (round 3/20), loss = 9.517227 (1.161 sec/epoch), lr: 0.001000
+mi: 2.9832646131515506
+client: 4, 2022-12-06 05:49:08.760012: step 75/600 (round 3/20), loss = 9.342624 (1.150 sec/epoch), lr: 0.001000
+mi: 2.7369551777839667
+client: 5, 2022-12-06 05:49:09.905458: step 78/600 (round 3/20), loss = 9.361566 (1.145 sec/epoch), lr: 0.001000
+mi: 2.8195096611976624
+client: 6, 2022-12-06 05:49:11.049033: step 81/600 (round 3/20), loss = 9.523359 (1.143 sec/epoch), lr: 0.001000
+mi: 2.9123381614685058
+client: 7, 2022-12-06 05:49:12.212243: step 84/600 (round 3/20), loss = 9.693144 (1.163 sec/epoch), lr: 0.001000
+mi: 3.1134153723716733
+client: 8, 2022-12-06 05:49:13.363952: step 87/600 (round 3/20), loss = 9.725972 (1.152 sec/epoch), lr: 0.001000
+mi: 3.121766877174378
+client: 9, 2022-12-06 05:49:14.513922: step 90/600 (round 3/20), loss = 9.348274 (1.150 sec/epoch), lr: 0.001000
+mi: 2.8729867815971377
+Evaluating on dev set...
+client: 0,  val round:3, time: 44.891478(s), X (MRR: 0.2305, NDCG@10: 0.2820, HR@10: 0.5000), Y (MRR: 0.3107, NDCG@10: 0.3481, HR@10: 0.5126)
+client: 1,  val round:3, time: 45.324524(s), X (MRR: 0.2161, NDCG@10: 0.2596, HR@10: 0.4526), Y (MRR: 0.3222, NDCG@10: 0.3650, HR@10: 0.5350)
+client: 2,  val round:3, time: 45.754119(s), X (MRR: 0.2239, NDCG@10: 0.2708, HR@10: 0.4756), Y (MRR: 0.3027, NDCG@10: 0.3459, HR@10: 0.5174)
+client: 3,  val round:3, time: 46.186992(s), X (MRR: 0.2352, NDCG@10: 0.2818, HR@10: 0.4840), Y (MRR: 0.3626, NDCG@10: 0.4027, HR@10: 0.5637)
+client: 4,  val round:3, time: 46.635077(s), X (MRR: 0.2574, NDCG@10: 0.2932, HR@10: 0.4591), Y (MRR: 0.2829, NDCG@10: 0.3390, HR@10: 0.5538)
+client: 5,  val round:3, time: 47.068360(s), X (MRR: 0.2315, NDCG@10: 0.2761, HR@10: 0.4754), Y (MRR: 0.3523, NDCG@10: 0.3960, HR@10: 0.5610)
+client: 6,  val round:3, time: 47.502956(s), X (MRR: 0.2558, NDCG@10: 0.3009, HR@10: 0.4987), Y (MRR: 0.3324, NDCG@10: 0.3729, HR@10: 0.5370)
+client: 7,  val round:3, time: 47.935032(s), X (MRR: 0.2180, NDCG@10: 0.2710, HR@10: 0.4914), Y (MRR: 0.3058, NDCG@10: 0.3532, HR@10: 0.5441)
+client: 8,  val round:3, time: 48.366101(s), X (MRR: 0.2396, NDCG@10: 0.2845, HR@10: 0.4750), Y (MRR: 0.2810, NDCG@10: 0.3142, HR@10: 0.4645)
+client: 9,  val round:3, time: 48.806363(s), X (MRR: 0.2270, NDCG@10: 0.2691, HR@10: 0.4577), Y (MRR: 0.3204, NDCG@10: 0.3622, HR@10: 0.5256)
+average round:3, time: 49.017642(s), X (MRR: 0.2335, NDCG@10: 0.2789, HR@10: 0.4770), Y (MRR: 0.3173, NDCG@10: 0.3599, HR@10: 0.5315)
+client: 0, 2022-12-06 05:49:20.061167: step 93/600 (round 4/20), loss = 8.855171 (1.167 sec/epoch), lr: 0.001000
+mi: 2.527301859855652
+client: 1, 2022-12-06 05:49:21.212231: step 96/600 (round 4/20), loss = 8.715709 (1.151 sec/epoch), lr: 0.001000
+mi: 2.560279476642609
+client: 2, 2022-12-06 05:49:22.357312: step 99/600 (round 4/20), loss = 8.736540 (1.145 sec/epoch), lr: 0.001000
+mi: 2.532805240154266
+client: 3, 2022-12-06 05:49:23.510243: step 102/600 (round 4/20), loss = 8.817532 (1.153 sec/epoch), lr: 0.001000
+mi: 2.546039724349976
+client: 4, 2022-12-06 05:49:24.684341: step 105/600 (round 4/20), loss = 8.748268 (1.174 sec/epoch), lr: 0.001000
+mi: 2.702218055725098
+client: 5, 2022-12-06 05:49:25.840045: step 108/600 (round 4/20), loss = 8.761003 (1.156 sec/epoch), lr: 0.001000
+mi: 2.556603407859803
+client: 6, 2022-12-06 05:49:26.982921: step 111/600 (round 4/20), loss = 8.807005 (1.143 sec/epoch), lr: 0.001000
+mi: 2.5972033739089966
+client: 7, 2022-12-06 05:49:28.140394: step 114/600 (round 4/20), loss = 8.837563 (1.157 sec/epoch), lr: 0.001000
+mi: 2.731208896636963
+client: 8, 2022-12-06 05:49:29.308862: step 117/600 (round 4/20), loss = 8.799117 (1.168 sec/epoch), lr: 0.001000
+mi: 2.587802875041962
+client: 9, 2022-12-06 05:49:30.478087: step 120/600 (round 4/20), loss = 8.761859 (1.169 sec/epoch), lr: 0.001000
+mi: 2.5655047059059144
+Evaluating on dev set...
+client: 0,  val round:4, time: 60.856640(s), X (MRR: 0.2585, NDCG@10: 0.3050, HR@10: 0.5073), Y (MRR: 0.3152, NDCG@10: 0.3531, HR@10: 0.5176)
+client: 1,  val round:4, time: 61.290351(s), X (MRR: 0.2200, NDCG@10: 0.2640, HR@10: 0.4574), Y (MRR: 0.3113, NDCG@10: 0.3597, HR@10: 0.5450)
+client: 2,  val round:4, time: 61.726381(s), X (MRR: 0.2420, NDCG@10: 0.2856, HR@10: 0.4780), Y (MRR: 0.3099, NDCG@10: 0.3500, HR@10: 0.5124)
+client: 3,  val round:4, time: 62.161612(s), X (MRR: 0.2395, NDCG@10: 0.2905, HR@10: 0.5037), Y (MRR: 0.3794, NDCG@10: 0.4088, HR@10: 0.5392)
+client: 4,  val round:4, time: 62.595563(s), X (MRR: 0.2635, NDCG@10: 0.3021, HR@10: 0.4760), Y (MRR: 0.2948, NDCG@10: 0.3436, HR@10: 0.5385)
+client: 5,  val round:4, time: 63.024793(s), X (MRR: 0.2511, NDCG@10: 0.2945, HR@10: 0.4877), Y (MRR: 0.3412, NDCG@10: 0.3875, HR@10: 0.5610)
+client: 6,  val round:4, time: 63.463980(s), X (MRR: 0.2541, NDCG@10: 0.2978, HR@10: 0.4911), Y (MRR: 0.3293, NDCG@10: 0.3692, HR@10: 0.5324)
+client: 7,  val round:4, time: 63.682001(s), X (MRR: 0.2408, NDCG@10: 0.2911, HR@10: 0.5012), Y (MRR: 0.3106, NDCG@10: 0.3612, HR@10: 0.5588)
+client: 8,  val round:4, time: 64.116485(s), X (MRR: 0.2414, NDCG@10: 0.2882, HR@10: 0.4825), Y (MRR: 0.2819, NDCG@10: 0.3180, HR@10: 0.4739)
+client: 9,  val round:4, time: 64.557316(s), X (MRR: 0.2335, NDCG@10: 0.2806, HR@10: 0.4801), Y (MRR: 0.3288, NDCG@10: 0.3693, HR@10: 0.5302)
+average round:4, time: 64.781660(s), X (MRR: 0.2444, NDCG@10: 0.2899, HR@10: 0.4865), Y (MRR: 0.3203, NDCG@10: 0.3620, HR@10: 0.5309)
+client: 0, 2022-12-06 05:49:35.827706: step 123/600 (round 5/20), loss = 8.606899 (1.170 sec/epoch), lr: 0.001000
+mi: 2.431004083156586
+client: 1, 2022-12-06 05:49:36.997002: step 126/600 (round 5/20), loss = 8.475836 (1.169 sec/epoch), lr: 0.001000
+mi: 2.398918068408966
+client: 2, 2022-12-06 05:49:38.177904: step 129/600 (round 5/20), loss = 8.507333 (1.181 sec/epoch), lr: 0.001000
+mi: 2.3996355414390567
+client: 3, 2022-12-06 05:49:39.353377: step 132/600 (round 5/20), loss = 8.571375 (1.175 sec/epoch), lr: 0.001000
+mi: 2.4079922795295716
+client: 4, 2022-12-06 05:49:40.526105: step 135/600 (round 5/20), loss = 8.483162 (1.173 sec/epoch), lr: 0.001000
+mi: 2.4401651382446294
+client: 5, 2022-12-06 05:49:41.672715: step 138/600 (round 5/20), loss = 8.516873 (1.146 sec/epoch), lr: 0.001000
+mi: 2.424005746841431
+client: 6, 2022-12-06 05:49:42.847272: step 141/600 (round 5/20), loss = 8.551943 (1.174 sec/epoch), lr: 0.001000
+mi: 2.382611608505249
+client: 7, 2022-12-06 05:49:44.026758: step 144/600 (round 5/20), loss = 8.581053 (1.179 sec/epoch), lr: 0.001000
+mi: 2.4297320604324346
+client: 8, 2022-12-06 05:49:45.170923: step 147/600 (round 5/20), loss = 8.570563 (1.144 sec/epoch), lr: 0.001000
+mi: 2.429821312427521
+client: 9, 2022-12-06 05:49:46.323495: step 150/600 (round 5/20), loss = 8.513769 (1.152 sec/epoch), lr: 0.001000
+mi: 2.4233872175216677
+Evaluating on dev set...
+client: 0,  val round:5, time: 76.703727(s), X (MRR: 0.2754, NDCG@10: 0.3186, HR@10: 0.5097), Y (MRR: 0.3207, NDCG@10: 0.3573, HR@10: 0.5176)
+client: 1,  val round:5, time: 77.128911(s), X (MRR: 0.2272, NDCG@10: 0.2695, HR@10: 0.4574), Y (MRR: 0.3250, NDCG@10: 0.3688, HR@10: 0.5400)
+client: 2,  val round:5, time: 77.558326(s), X (MRR: 0.2636, NDCG@10: 0.3033, HR@10: 0.4829), Y (MRR: 0.3177, NDCG@10: 0.3577, HR@10: 0.5174)
+client: 3,  val round:5, time: 77.984644(s), X (MRR: 0.2486, NDCG@10: 0.2991, HR@10: 0.5111), Y (MRR: 0.3780, NDCG@10: 0.4065, HR@10: 0.5343)
+client: 4,  val round:5, time: 78.414350(s), X (MRR: 0.2691, NDCG@10: 0.3072, HR@10: 0.4784), Y (MRR: 0.3145, NDCG@10: 0.3568, HR@10: 0.5333)
+client: 5,  val round:5, time: 78.839321(s), X (MRR: 0.2717, NDCG@10: 0.3139, HR@10: 0.5000), Y (MRR: 0.3482, NDCG@10: 0.3954, HR@10: 0.5707)
+client: 6,  val round:5, time: 79.262990(s), X (MRR: 0.2713, NDCG@10: 0.3132, HR@10: 0.4987), Y (MRR: 0.3400, NDCG@10: 0.3822, HR@10: 0.5509)
+client: 7,  val round:5, time: 79.701733(s), X (MRR: 0.2597, NDCG@10: 0.3079, HR@10: 0.5086), Y (MRR: 0.3237, NDCG@10: 0.3716, HR@10: 0.5588)
+client: 8,  val round:5, time: 80.133023(s), X (MRR: 0.2566, NDCG@10: 0.3040, HR@10: 0.4975), Y (MRR: 0.2977, NDCG@10: 0.3329, HR@10: 0.4834)
+client: 9,  val round:5, time: 80.570336(s), X (MRR: 0.2499, NDCG@10: 0.2947, HR@10: 0.4851), Y (MRR: 0.3354, NDCG@10: 0.3689, HR@10: 0.5116)
+average round:5, time: 80.784570(s), X (MRR: 0.2593, NDCG@10: 0.3031, HR@10: 0.4929), Y (MRR: 0.3301, NDCG@10: 0.3698, HR@10: 0.5318)
+client: 0, 2022-12-06 05:49:51.819308: step 153/600 (round 6/20), loss = 8.202000 (1.158 sec/epoch), lr: 0.001000
+mi: 2.2565708398818973
+client: 1, 2022-12-06 05:49:52.985219: step 156/600 (round 6/20), loss = 8.131628 (1.166 sec/epoch), lr: 0.001000
+mi: 2.2133268117904668
+client: 2, 2022-12-06 05:49:54.137221: step 159/600 (round 6/20), loss = 8.162019 (1.152 sec/epoch), lr: 0.001000
+mi: 2.2332836031913756
+client: 3, 2022-12-06 05:49:55.297023: step 162/600 (round 6/20), loss = 8.202773 (1.160 sec/epoch), lr: 0.001000
+mi: 2.2284061908721924
+client: 4, 2022-12-06 05:49:56.448679: step 165/600 (round 6/20), loss = 8.106228 (1.151 sec/epoch), lr: 0.001000
+mi: 2.2083046674728393
+client: 5, 2022-12-06 05:49:57.593227: step 168/600 (round 6/20), loss = 8.155423 (1.144 sec/epoch), lr: 0.001000
+mi: 2.2238721966743475
+client: 6, 2022-12-06 05:49:58.745577: step 171/600 (round 6/20), loss = 8.197906 (1.152 sec/epoch), lr: 0.001000
+mi: 2.2158589601516723
+client: 7, 2022-12-06 05:49:59.895729: step 174/600 (round 6/20), loss = 8.189793 (1.150 sec/epoch), lr: 0.001000
+mi: 2.2319952607154847
+client: 8, 2022-12-06 05:50:01.058758: step 177/600 (round 6/20), loss = 8.189264 (1.163 sec/epoch), lr: 0.001000
+mi: 2.2619128584861756
+client: 9, 2022-12-06 05:50:02.224318: step 180/600 (round 6/20), loss = 8.153467 (1.165 sec/epoch), lr: 0.001000
+mi: 2.271917366981507
+Evaluating on dev set...
+client: 0,  val round:6, time: 92.605981(s), X (MRR: 0.2854, NDCG@10: 0.3312, HR@10: 0.5267), Y (MRR: 0.3346, NDCG@10: 0.3745, HR@10: 0.5427)
+client: 1,  val round:6, time: 93.038324(s), X (MRR: 0.2486, NDCG@10: 0.2905, HR@10: 0.4745), Y (MRR: 0.3536, NDCG@10: 0.3891, HR@10: 0.5350)
+client: 2,  val round:6, time: 93.474319(s), X (MRR: 0.2804, NDCG@10: 0.3203, HR@10: 0.4976), Y (MRR: 0.3240, NDCG@10: 0.3630, HR@10: 0.5174)
+client: 3,  val round:6, time: 93.909633(s), X (MRR: 0.2735, NDCG@10: 0.3250, HR@10: 0.5332), Y (MRR: 0.3966, NDCG@10: 0.4231, HR@10: 0.5441)
+client: 4,  val round:6, time: 94.345238(s), X (MRR: 0.2835, NDCG@10: 0.3207, HR@10: 0.4856), Y (MRR: 0.3330, NDCG@10: 0.3723, HR@10: 0.5385)
+client: 5,  val round:6, time: 94.788749(s), X (MRR: 0.2720, NDCG@10: 0.3200, HR@10: 0.5197), Y (MRR: 0.3617, NDCG@10: 0.4044, HR@10: 0.5659)
+client: 6,  val round:6, time: 95.220001(s), X (MRR: 0.2955, NDCG@10: 0.3358, HR@10: 0.5114), Y (MRR: 0.3560, NDCG@10: 0.3958, HR@10: 0.5556)
+client: 7,  val round:6, time: 95.659981(s), X (MRR: 0.2842, NDCG@10: 0.3267, HR@10: 0.5086), Y (MRR: 0.3260, NDCG@10: 0.3737, HR@10: 0.5588)
+client: 8,  val round:6, time: 96.089473(s), X (MRR: 0.2828, NDCG@10: 0.3238, HR@10: 0.4950), Y (MRR: 0.3043, NDCG@10: 0.3420, HR@10: 0.4976)
+client: 9,  val round:6, time: 96.520598(s), X (MRR: 0.2770, NDCG@10: 0.3191, HR@10: 0.5000), Y (MRR: 0.3484, NDCG@10: 0.3881, HR@10: 0.5442)
+average round:6, time: 96.743181(s), X (MRR: 0.2783, NDCG@10: 0.3213, HR@10: 0.5052), Y (MRR: 0.3438, NDCG@10: 0.3826, HR@10: 0.5400)
+client: 0, 2022-12-06 05:50:07.770815: step 183/600 (round 7/20), loss = 7.539987 (1.151 sec/epoch), lr: 0.001000
+mi: 1.8084522247314456
+client: 1, 2022-12-06 05:50:08.935133: step 186/600 (round 7/20), loss = 7.483498 (1.164 sec/epoch), lr: 0.001000
+mi: 1.784114342927933
+client: 2, 2022-12-06 05:50:10.109909: step 189/600 (round 7/20), loss = 7.517228 (1.175 sec/epoch), lr: 0.001000
+mi: 1.83726361989975
+client: 3, 2022-12-06 05:50:11.292394: step 192/600 (round 7/20), loss = 7.503606 (1.182 sec/epoch), lr: 0.001000
+mi: 1.7472537934780121
+client: 4, 2022-12-06 05:50:12.497157: step 195/600 (round 7/20), loss = 7.444107 (1.205 sec/epoch), lr: 0.001000
+mi: 1.755990815162659
+client: 5, 2022-12-06 05:50:13.700004: step 198/600 (round 7/20), loss = 7.515437 (1.203 sec/epoch), lr: 0.001000
+mi: 1.796014350652695
+client: 6, 2022-12-06 05:50:14.883452: step 201/600 (round 7/20), loss = 7.516475 (1.183 sec/epoch), lr: 0.001000
+mi: 1.771254199743271
+client: 7, 2022-12-06 05:50:16.060382: step 204/600 (round 7/20), loss = 7.553409 (1.177 sec/epoch), lr: 0.001000
+mi: 1.818765777349472
+client: 8, 2022-12-06 05:50:17.228579: step 207/600 (round 7/20), loss = 7.539212 (1.168 sec/epoch), lr: 0.001000
+mi: 1.8348623812198641
+client: 9, 2022-12-06 05:50:18.392155: step 210/600 (round 7/20), loss = 7.483738 (1.163 sec/epoch), lr: 0.001000
+mi: 1.802878105640412
+Evaluating on dev set...
+client: 0,  val round:7, time: 108.769033(s), X (MRR: 0.2945, NDCG@10: 0.3414, HR@10: 0.5388), Y (MRR: 0.3539, NDCG@10: 0.3934, HR@10: 0.5578)
+client: 1,  val round:7, time: 109.197546(s), X (MRR: 0.2762, NDCG@10: 0.3204, HR@10: 0.5061), Y (MRR: 0.3645, NDCG@10: 0.4024, HR@10: 0.5500)
+client: 2,  val round:7, time: 109.634280(s), X (MRR: 0.3054, NDCG@10: 0.3412, HR@10: 0.5049), Y (MRR: 0.3366, NDCG@10: 0.3722, HR@10: 0.5174)
+client: 3,  val round:7, time: 110.062243(s), X (MRR: 0.2905, NDCG@10: 0.3399, HR@10: 0.5381), Y (MRR: 0.4038, NDCG@10: 0.4302, HR@10: 0.5490)
+client: 4,  val round:7, time: 110.485524(s), X (MRR: 0.2948, NDCG@10: 0.3285, HR@10: 0.4832), Y (MRR: 0.3437, NDCG@10: 0.3869, HR@10: 0.5590)
+client: 5,  val round:7, time: 110.912990(s), X (MRR: 0.2960, NDCG@10: 0.3415, HR@10: 0.5296), Y (MRR: 0.3510, NDCG@10: 0.3965, HR@10: 0.5659)
+client: 6,  val round:7, time: 111.338717(s), X (MRR: 0.3128, NDCG@10: 0.3484, HR@10: 0.5063), Y (MRR: 0.3816, NDCG@10: 0.4177, HR@10: 0.5648)
+client: 7,  val round:7, time: 111.772956(s), X (MRR: 0.2907, NDCG@10: 0.3341, HR@10: 0.5160), Y (MRR: 0.3404, NDCG@10: 0.3890, HR@10: 0.5735)
+client: 8,  val round:7, time: 112.199361(s), X (MRR: 0.3004, NDCG@10: 0.3375, HR@10: 0.4950), Y (MRR: 0.3213, NDCG@10: 0.3597, HR@10: 0.5166)
+client: 9,  val round:7, time: 112.632841(s), X (MRR: 0.2899, NDCG@10: 0.3338, HR@10: 0.5174), Y (MRR: 0.3620, NDCG@10: 0.3986, HR@10: 0.5442)
+average round:7, time: 112.849794(s), X (MRR: 0.2951, NDCG@10: 0.3367, HR@10: 0.5135), Y (MRR: 0.3559, NDCG@10: 0.3947, HR@10: 0.5498)
+client: 0, 2022-12-06 05:50:23.944914: step 213/600 (round 8/20), loss = 6.816314 (1.219 sec/epoch), lr: 0.001000
+mi: 1.0963592186570168
+client: 1, 2022-12-06 05:50:25.124966: step 216/600 (round 8/20), loss = 6.797092 (1.180 sec/epoch), lr: 0.001000
+mi: 1.0913836091756821
+client: 2, 2022-12-06 05:50:26.301408: step 219/600 (round 8/20), loss = 6.803344 (1.176 sec/epoch), lr: 0.001000
+mi: 1.1417263209819792
+client: 3, 2022-12-06 05:50:27.464654: step 222/600 (round 8/20), loss = 6.792115 (1.163 sec/epoch), lr: 0.001000
+mi: 1.0677761465311053
+client: 4, 2022-12-06 05:50:28.653053: step 225/600 (round 8/20), loss = 6.762010 (1.188 sec/epoch), lr: 0.001000
+mi: 1.118586626648903
+client: 5, 2022-12-06 05:50:29.831770: step 228/600 (round 8/20), loss = 6.841065 (1.179 sec/epoch), lr: 0.001000
+mi: 1.1841363340616227
+client: 6, 2022-12-06 05:50:31.020229: step 231/600 (round 8/20), loss = 6.833443 (1.188 sec/epoch), lr: 0.001000
+mi: 1.1245286703109743
+client: 7, 2022-12-06 05:50:32.197822: step 234/600 (round 8/20), loss = 6.842948 (1.177 sec/epoch), lr: 0.001000
+mi: 1.192210265994072
+client: 8, 2022-12-06 05:50:33.391694: step 237/600 (round 8/20), loss = 6.829491 (1.194 sec/epoch), lr: 0.001000
+mi: 1.1175141751766209
+client: 9, 2022-12-06 05:50:34.575582: step 240/600 (round 8/20), loss = 6.796689 (1.184 sec/epoch), lr: 0.001000
+mi: 1.1241193503141405
+Evaluating on dev set...
+client: 0,  val round:8, time: 124.948138(s), X (MRR: 0.3030, NDCG@10: 0.3528, HR@10: 0.5558), Y (MRR: 0.3526, NDCG@10: 0.3928, HR@10: 0.5578)
+client: 1,  val round:8, time: 125.369234(s), X (MRR: 0.2752, NDCG@10: 0.3198, HR@10: 0.5061), Y (MRR: 0.3693, NDCG@10: 0.4060, HR@10: 0.5500)
+client: 2,  val round:8, time: 125.800945(s), X (MRR: 0.3086, NDCG@10: 0.3464, HR@10: 0.5146), Y (MRR: 0.3489, NDCG@10: 0.3845, HR@10: 0.5274)
+client: 3,  val round:8, time: 126.229511(s), X (MRR: 0.3038, NDCG@10: 0.3528, HR@10: 0.5479), Y (MRR: 0.4046, NDCG@10: 0.4350, HR@10: 0.5637)
+client: 4,  val round:8, time: 126.660025(s), X (MRR: 0.2975, NDCG@10: 0.3310, HR@10: 0.4856), Y (MRR: 0.3573, NDCG@10: 0.3961, HR@10: 0.5538)
+client: 5,  val round:8, time: 127.102492(s), X (MRR: 0.3046, NDCG@10: 0.3495, HR@10: 0.5345), Y (MRR: 0.3460, NDCG@10: 0.3913, HR@10: 0.5610)
+client: 6,  val round:8, time: 127.532076(s), X (MRR: 0.3247, NDCG@10: 0.3585, HR@10: 0.5114), Y (MRR: 0.3768, NDCG@10: 0.4194, HR@10: 0.5833)
+client: 7,  val round:8, time: 127.974303(s), X (MRR: 0.3004, NDCG@10: 0.3459, HR@10: 0.5332), Y (MRR: 0.3480, NDCG@10: 0.3931, HR@10: 0.5686)
+client: 8,  val round:8, time: 128.407916(s), X (MRR: 0.3079, NDCG@10: 0.3452, HR@10: 0.5025), Y (MRR: 0.3373, NDCG@10: 0.3731, HR@10: 0.5213)
+client: 9,  val round:8, time: 128.849013(s), X (MRR: 0.2911, NDCG@10: 0.3362, HR@10: 0.5224), Y (MRR: 0.3741, NDCG@10: 0.4078, HR@10: 0.5442)
+average round:8, time: 129.068223(s), X (MRR: 0.3017, NDCG@10: 0.3438, HR@10: 0.5214), Y (MRR: 0.3615, NDCG@10: 0.3999, HR@10: 0.5531)
+client: 0, 2022-12-06 05:50:40.118377: step 243/600 (round 9/20), loss = 6.225556 (1.174 sec/epoch), lr: 0.001000
+mi: 0.6610842034220696
+client: 1, 2022-12-06 05:50:41.249678: step 246/600 (round 9/20), loss = 6.211375 (1.131 sec/epoch), lr: 0.001000
+mi: 0.6616551041603089
+client: 2, 2022-12-06 05:50:42.399323: step 249/600 (round 9/20), loss = 6.185487 (1.149 sec/epoch), lr: 0.001000
+mi: 0.6478772342205049
+client: 3, 2022-12-06 05:50:43.552602: step 252/600 (round 9/20), loss = 6.197919 (1.153 sec/epoch), lr: 0.001000
+mi: 0.6329949364066124
+client: 4, 2022-12-06 05:50:44.715802: step 255/600 (round 9/20), loss = 6.148298 (1.163 sec/epoch), lr: 0.001000
+mi: 0.6740303024649621
+client: 5, 2022-12-06 05:50:45.872598: step 258/600 (round 9/20), loss = 6.222860 (1.157 sec/epoch), lr: 0.001000
+mi: 0.7024892166256905
+client: 6, 2022-12-06 05:50:47.031730: step 261/600 (round 9/20), loss = 6.226852 (1.159 sec/epoch), lr: 0.001000
+mi: 0.6905482575297356
+client: 7, 2022-12-06 05:50:48.191249: step 264/600 (round 9/20), loss = 6.239393 (1.159 sec/epoch), lr: 0.001000
+mi: 0.7520996779203416
+client: 8, 2022-12-06 05:50:49.355710: step 267/600 (round 9/20), loss = 6.225924 (1.164 sec/epoch), lr: 0.001000
+mi: 0.6968963563442232
+client: 9, 2022-12-06 05:50:50.526257: step 270/600 (round 9/20), loss = 6.181741 (1.170 sec/epoch), lr: 0.001000
+mi: 0.667808909714222
+Evaluating on dev set...
+client: 0,  val round:9, time: 140.908084(s), X (MRR: 0.3121, NDCG@10: 0.3584, HR@10: 0.5510), Y (MRR: 0.3622, NDCG@10: 0.4061, HR@10: 0.5779)
+client: 1,  val round:9, time: 141.344037(s), X (MRR: 0.2724, NDCG@10: 0.3167, HR@10: 0.5012), Y (MRR: 0.3633, NDCG@10: 0.4031, HR@10: 0.5550)
+client: 2,  val round:9, time: 141.558128(s), X (MRR: 0.3168, NDCG@10: 0.3552, HR@10: 0.5244), Y (MRR: 0.3467, NDCG@10: 0.3827, HR@10: 0.5274)
+client: 3,  val round:9, time: 141.990825(s), X (MRR: 0.3047, NDCG@10: 0.3565, HR@10: 0.5577), Y (MRR: 0.4076, NDCG@10: 0.4360, HR@10: 0.5588)
+client: 4,  val round:9, time: 142.423579(s), X (MRR: 0.2955, NDCG@10: 0.3308, HR@10: 0.4904), Y (MRR: 0.3792, NDCG@10: 0.4140, HR@10: 0.5590)
+client: 5,  val round:9, time: 142.861567(s), X (MRR: 0.3018, NDCG@10: 0.3484, HR@10: 0.5369), Y (MRR: 0.3588, NDCG@10: 0.4034, HR@10: 0.5707)
+client: 6,  val round:9, time: 143.075745(s), X (MRR: 0.3204, NDCG@10: 0.3566, HR@10: 0.5165), Y (MRR: 0.3841, NDCG@10: 0.4228, HR@10: 0.5741)
+client: 7,  val round:9, time: 143.502964(s), X (MRR: 0.3085, NDCG@10: 0.3565, HR@10: 0.5504), Y (MRR: 0.3537, NDCG@10: 0.3970, HR@10: 0.5686)
+client: 8,  val round:9, time: 143.930753(s), X (MRR: 0.3155, NDCG@10: 0.3504, HR@10: 0.5000), Y (MRR: 0.3444, NDCG@10: 0.3786, HR@10: 0.5213)
+client: 9,  val round:9, time: 144.359360(s), X (MRR: 0.2921, NDCG@10: 0.3349, HR@10: 0.5149), Y (MRR: 0.3759, NDCG@10: 0.4096, HR@10: 0.5442)
+average round:9, time: 144.576710(s), X (MRR: 0.3040, NDCG@10: 0.3464, HR@10: 0.5243), Y (MRR: 0.3676, NDCG@10: 0.4053, HR@10: 0.5557)
+client: 0, 2022-12-06 05:50:55.613998: step 273/600 (round 10/20), loss = 5.653375 (1.161 sec/epoch), lr: 0.001000
+mi: 0.42336097732186323
+client: 1, 2022-12-06 05:50:56.803849: step 276/600 (round 10/20), loss = 5.658928 (1.190 sec/epoch), lr: 0.001000
+mi: 0.43087916523218167
+client: 2, 2022-12-06 05:50:57.965277: step 279/600 (round 10/20), loss = 5.627719 (1.161 sec/epoch), lr: 0.001000
+mi: 0.4371220730245114
+client: 3, 2022-12-06 05:50:59.143437: step 282/600 (round 10/20), loss = 5.611599 (1.178 sec/epoch), lr: 0.001000
+mi: 0.4206076979637146
+client: 4, 2022-12-06 05:51:00.308063: step 285/600 (round 10/20), loss = 5.575840 (1.164 sec/epoch), lr: 0.001000
+mi: 0.4473696902394296
+client: 5, 2022-12-06 05:51:01.475802: step 288/600 (round 10/20), loss = 5.659224 (1.168 sec/epoch), lr: 0.001000
+mi: 0.45989387333393106
+client: 6, 2022-12-06 05:51:02.654642: step 291/600 (round 10/20), loss = 5.640894 (1.179 sec/epoch), lr: 0.001000
+mi: 0.4313699007034302
+client: 7, 2022-12-06 05:51:03.829257: step 294/600 (round 10/20), loss = 5.653537 (1.174 sec/epoch), lr: 0.001000
+mi: 0.4711826503276826
+client: 8, 2022-12-06 05:51:04.987350: step 297/600 (round 10/20), loss = 5.657948 (1.158 sec/epoch), lr: 0.001000
+mi: 0.46216934025287637
+client: 9, 2022-12-06 05:51:06.157082: step 300/600 (round 10/20), loss = 5.627535 (1.170 sec/epoch), lr: 0.001000
+mi: 0.4559185147285462
+Evaluating on dev set...
+client: 0,  val round:10, time: 156.530956(s), X (MRR: 0.3205, NDCG@10: 0.3683, HR@10: 0.5631), Y (MRR: 0.3657, NDCG@10: 0.4132, HR@10: 0.5930)
+client: 1,  val round:10, time: 156.964852(s), X (MRR: 0.2760, NDCG@10: 0.3182, HR@10: 0.4964), Y (MRR: 0.3628, NDCG@10: 0.4028, HR@10: 0.5550)
+client: 2,  val round:10, time: 157.180366(s), X (MRR: 0.3234, NDCG@10: 0.3621, HR@10: 0.5317), Y (MRR: 0.3570, NDCG@10: 0.3905, HR@10: 0.5274)
+client: 3,  val round:10, time: 157.604859(s), X (MRR: 0.3058, NDCG@10: 0.3568, HR@10: 0.5553), Y (MRR: 0.3977, NDCG@10: 0.4301, HR@10: 0.5637)
+client: 4,  val round:10, time: 158.030133(s), X (MRR: 0.2921, NDCG@10: 0.3283, HR@10: 0.4904), Y (MRR: 0.3860, NDCG@10: 0.4239, HR@10: 0.5744)
+client: 5,  val round:10, time: 158.454544(s), X (MRR: 0.3036, NDCG@10: 0.3495, HR@10: 0.5369), Y (MRR: 0.3581, NDCG@10: 0.4027, HR@10: 0.5707)
+client: 6,  val round:10, time: 158.670509(s), X (MRR: 0.3132, NDCG@10: 0.3511, HR@10: 0.5165), Y (MRR: 0.4011, NDCG@10: 0.4348, HR@10: 0.5694)
+client: 7,  val round:10, time: 159.099992(s), X (MRR: 0.3199, NDCG@10: 0.3662, HR@10: 0.5528), Y (MRR: 0.3598, NDCG@10: 0.4029, HR@10: 0.5735)
+client: 8,  val round:10, time: 159.530137(s), X (MRR: 0.3128, NDCG@10: 0.3515, HR@10: 0.5100), Y (MRR: 0.3514, NDCG@10: 0.3810, HR@10: 0.5118)
+client: 9,  val round:10, time: 159.966292(s), X (MRR: 0.2878, NDCG@10: 0.3326, HR@10: 0.5174), Y (MRR: 0.3738, NDCG@10: 0.4081, HR@10: 0.5442)
+average round:10, time: 159.966360(s), X (MRR: 0.3055, NDCG@10: 0.3485, HR@10: 0.5270), Y (MRR: 0.3713, NDCG@10: 0.4090, HR@10: 0.5583)
+client: 0, 2022-12-06 05:51:11.056837: step 303/600 (round 11/20), loss = 5.121443 (1.214 sec/epoch), lr: 0.001000
+mi: 0.33561505377292633
+client: 1, 2022-12-06 05:51:12.247702: step 306/600 (round 11/20), loss = 5.137189 (1.191 sec/epoch), lr: 0.001000
+mi: 0.3228973440825939
+client: 2, 2022-12-06 05:51:13.445509: step 309/600 (round 11/20), loss = 5.092067 (1.198 sec/epoch), lr: 0.001000
+mi: 0.2964171931147576
+client: 3, 2022-12-06 05:51:14.632065: step 312/600 (round 11/20), loss = 5.069255 (1.186 sec/epoch), lr: 0.001000
+mi: 0.3072136193513871
+client: 4, 2022-12-06 05:51:15.782304: step 315/600 (round 11/20), loss = 5.038787 (1.150 sec/epoch), lr: 0.001000
+mi: 0.3212310746312142
+client: 5, 2022-12-06 05:51:16.965430: step 318/600 (round 11/20), loss = 5.127285 (1.183 sec/epoch), lr: 0.001000
+mi: 0.3389919884502888
+client: 6, 2022-12-06 05:51:18.168773: step 321/600 (round 11/20), loss = 5.111642 (1.203 sec/epoch), lr: 0.001000
+mi: 0.3346656724810601
+client: 7, 2022-12-06 05:51:19.362215: step 324/600 (round 11/20), loss = 5.114378 (1.193 sec/epoch), lr: 0.001000
+mi: 0.37631014063954366
+client: 8, 2022-12-06 05:51:20.553106: step 327/600 (round 11/20), loss = 5.126372 (1.191 sec/epoch), lr: 0.001000
+mi: 0.35147801488637936
+client: 9, 2022-12-06 05:51:21.710865: step 330/600 (round 11/20), loss = 5.093444 (1.158 sec/epoch), lr: 0.001000
+mi: 0.3187840551137925
+Evaluating on dev set...
+client: 0,  val round:11, time: 172.088068(s), X (MRR: 0.3315, NDCG@10: 0.3773, HR@10: 0.5655), Y (MRR: 0.3642, NDCG@10: 0.4101, HR@10: 0.5879)
+client: 1,  val round:11, time: 172.517949(s), X (MRR: 0.2744, NDCG@10: 0.3168, HR@10: 0.4939), Y (MRR: 0.3655, NDCG@10: 0.4032, HR@10: 0.5500)
+client: 2,  val round:11, time: 172.740517(s), X (MRR: 0.3237, NDCG@10: 0.3644, HR@10: 0.5390), Y (MRR: 0.3626, NDCG@10: 0.3930, HR@10: 0.5224)
+client: 3,  val round:11, time: 173.164977(s), X (MRR: 0.3089, NDCG@10: 0.3564, HR@10: 0.5455), Y (MRR: 0.3958, NDCG@10: 0.4273, HR@10: 0.5588)
+client: 4,  val round:11, time: 173.589017(s), X (MRR: 0.2899, NDCG@10: 0.3261, HR@10: 0.4880), Y (MRR: 0.3853, NDCG@10: 0.4249, HR@10: 0.5795)
+client: 5,  val round:11, time: 173.810942(s), X (MRR: 0.2974, NDCG@10: 0.3441, HR@10: 0.5345), Y (MRR: 0.3651, NDCG@10: 0.4063, HR@10: 0.5659)
+client: 6,  val round:11, time: 174.250946(s), X (MRR: 0.3125, NDCG@10: 0.3480, HR@10: 0.5063), Y (MRR: 0.4055, NDCG@10: 0.4408, HR@10: 0.5787)
+client: 7,  val round:11, time: 174.688472(s), X (MRR: 0.3201, NDCG@10: 0.3658, HR@10: 0.5504), Y (MRR: 0.3680, NDCG@10: 0.4094, HR@10: 0.5735)
+client: 8,  val round:11, time: 175.123910(s), X (MRR: 0.3058, NDCG@10: 0.3453, HR@10: 0.5075), Y (MRR: 0.3442, NDCG@10: 0.3761, HR@10: 0.5118)
+client: 9,  val round:11, time: 175.342784(s), X (MRR: 0.2842, NDCG@10: 0.3306, HR@10: 0.5199), Y (MRR: 0.3763, NDCG@10: 0.4152, HR@10: 0.5628)
+average round:11, time: 175.557119(s), X (MRR: 0.3049, NDCG@10: 0.3475, HR@10: 0.5250), Y (MRR: 0.3733, NDCG@10: 0.4106, HR@10: 0.5591)
+client: 0, 2022-12-06 05:51:26.587755: step 333/600 (round 12/20), loss = 4.605614 (1.154 sec/epoch), lr: 0.001000
+mi: 0.25060814321041114
+client: 1, 2022-12-06 05:51:27.759014: step 336/600 (round 12/20), loss = 4.651144 (1.171 sec/epoch), lr: 0.001000
+mi: 0.26489911749959
+client: 2, 2022-12-06 05:51:28.931266: step 339/600 (round 12/20), loss = 4.603251 (1.172 sec/epoch), lr: 0.001000
+mi: 0.25343476012349136
+client: 3, 2022-12-06 05:51:30.130432: step 342/600 (round 12/20), loss = 4.568291 (1.199 sec/epoch), lr: 0.001000
+mi: 0.24749006107449534
+client: 4, 2022-12-06 05:51:31.310354: step 345/600 (round 12/20), loss = 4.538966 (1.180 sec/epoch), lr: 0.001000
+mi: 0.25497500449419025
+client: 5, 2022-12-06 05:51:32.522396: step 348/600 (round 12/20), loss = 4.628858 (1.212 sec/epoch), lr: 0.001000
+mi: 0.28343323394656184
+client: 6, 2022-12-06 05:51:33.737690: step 351/600 (round 12/20), loss = 4.602654 (1.215 sec/epoch), lr: 0.001000
+mi: 0.25606510639190677
+client: 7, 2022-12-06 05:51:34.931005: step 354/600 (round 12/20), loss = 4.608716 (1.193 sec/epoch), lr: 0.001000
+mi: 0.28037102669477465
+client: 8, 2022-12-06 05:51:36.123014: step 357/600 (round 12/20), loss = 4.623630 (1.192 sec/epoch), lr: 0.001000
+mi: 0.2697138227522374
+client: 9, 2022-12-06 05:51:37.284675: step 360/600 (round 12/20), loss = 4.589428 (1.162 sec/epoch), lr: 0.001000
+mi: 0.2490716949105263
+Evaluating on dev set...
+client: 0,  val round:12, time: 187.667331(s), X (MRR: 0.3421, NDCG@10: 0.3848, HR@10: 0.5631), Y (MRR: 0.3620, NDCG@10: 0.4080, HR@10: 0.5879)
+client: 1,  val round:12, time: 188.105032(s), X (MRR: 0.2781, NDCG@10: 0.3207, HR@10: 0.4988), Y (MRR: 0.3623, NDCG@10: 0.3976, HR@10: 0.5400)
+client: 2,  val round:12, time: 188.543359(s), X (MRR: 0.3218, NDCG@10: 0.3630, HR@10: 0.5390), Y (MRR: 0.3608, NDCG@10: 0.3915, HR@10: 0.5224)
+client: 3,  val round:12, time: 188.760645(s), X (MRR: 0.3040, NDCG@10: 0.3526, HR@10: 0.5455), Y (MRR: 0.3972, NDCG@10: 0.4287, HR@10: 0.5588)
+client: 4,  val round:12, time: 188.974918(s), X (MRR: 0.2915, NDCG@10: 0.3286, HR@10: 0.4928), Y (MRR: 0.3929, NDCG@10: 0.4334, HR@10: 0.5897)
+client: 5,  val round:12, time: 189.405799(s), X (MRR: 0.2954, NDCG@10: 0.3394, HR@10: 0.5222), Y (MRR: 0.3711, NDCG@10: 0.4067, HR@10: 0.5512)
+client: 6,  val round:12, time: 189.837493(s), X (MRR: 0.3169, NDCG@10: 0.3514, HR@10: 0.5063), Y (MRR: 0.4025, NDCG@10: 0.4414, HR@10: 0.5880)
+client: 7,  val round:12, time: 190.055866(s), X (MRR: 0.3185, NDCG@10: 0.3617, HR@10: 0.5405), Y (MRR: 0.3651, NDCG@10: 0.4057, HR@10: 0.5686)
+client: 8,  val round:12, time: 190.272640(s), X (MRR: 0.3042, NDCG@10: 0.3411, HR@10: 0.4975), Y (MRR: 0.3452, NDCG@10: 0.3747, HR@10: 0.5024)
+client: 9,  val round:12, time: 190.488955(s), X (MRR: 0.2805, NDCG@10: 0.3309, HR@10: 0.5299), Y (MRR: 0.3687, NDCG@10: 0.4037, HR@10: 0.5442)
+average round:12, time: 190.489023(s), X (MRR: 0.3053, NDCG@10: 0.3474, HR@10: 0.5236), Y (MRR: 0.3728, NDCG@10: 0.4091, HR@10: 0.5553)
+client: 0, 2022-12-06 05:51:41.548502: step 363/600 (round 13/20), loss = 4.138347 (1.183 sec/epoch), lr: 0.001000
+mi: 0.22498601004481314
+client: 1, 2022-12-06 05:51:42.723533: step 366/600 (round 13/20), loss = 4.192399 (1.175 sec/epoch), lr: 0.001000
+mi: 0.20950987562537202
+client: 2, 2022-12-06 05:51:43.896100: step 369/600 (round 13/20), loss = 4.149764 (1.172 sec/epoch), lr: 0.001000
+mi: 0.2017701126635075
+client: 3, 2022-12-06 05:51:45.088069: step 372/600 (round 13/20), loss = 4.100509 (1.192 sec/epoch), lr: 0.001000
+mi: 0.21349437981843952
+client: 4, 2022-12-06 05:51:46.268320: step 375/600 (round 13/20), loss = 4.082516 (1.180 sec/epoch), lr: 0.001000
+mi: 0.22040475457906727
+client: 5, 2022-12-06 05:51:47.472143: step 378/600 (round 13/20), loss = 4.161106 (1.204 sec/epoch), lr: 0.001000
+mi: 0.22680678963661197
+client: 6, 2022-12-06 05:51:48.652994: step 381/600 (round 13/20), loss = 4.142970 (1.181 sec/epoch), lr: 0.001000
+mi: 0.2135079689323903
+client: 7, 2022-12-06 05:51:49.824388: step 384/600 (round 13/20), loss = 4.142136 (1.171 sec/epoch), lr: 0.001000
+mi: 0.24710037335753443
+client: 8, 2022-12-06 05:51:50.972074: step 387/600 (round 13/20), loss = 4.171086 (1.148 sec/epoch), lr: 0.001000
+mi: 0.2260388478636742
+client: 9, 2022-12-06 05:51:52.134709: step 390/600 (round 13/20), loss = 4.138941 (1.162 sec/epoch), lr: 0.001000
+mi: 0.19764991737902163
+Evaluating on dev set...
+client: 0,  val round:13, time: 202.503506(s), X (MRR: 0.3468, NDCG@10: 0.3917, HR@10: 0.5728), Y (MRR: 0.3608, NDCG@10: 0.4058, HR@10: 0.5829)
+client: 1,  val round:13, time: 202.921486(s), X (MRR: 0.2783, NDCG@10: 0.3183, HR@10: 0.4891), Y (MRR: 0.3540, NDCG@10: 0.3907, HR@10: 0.5400)
+client: 2,  val round:13, time: 203.342188(s), X (MRR: 0.3199, NDCG@10: 0.3590, HR@10: 0.5293), Y (MRR: 0.3664, NDCG@10: 0.3952, HR@10: 0.5224)
+client: 3,  val round:13, time: 203.771570(s), X (MRR: 0.3037, NDCG@10: 0.3491, HR@10: 0.5332), Y (MRR: 0.3979, NDCG@10: 0.4251, HR@10: 0.5441)
+client: 4,  val round:13, time: 203.983246(s), X (MRR: 0.2859, NDCG@10: 0.3239, HR@10: 0.4904), Y (MRR: 0.3905, NDCG@10: 0.4301, HR@10: 0.5846)
+client: 5,  val round:13, time: 204.192542(s), X (MRR: 0.2953, NDCG@10: 0.3401, HR@10: 0.5246), Y (MRR: 0.3841, NDCG@10: 0.4164, HR@10: 0.5512)
+client: 6,  val round:13, time: 204.610615(s), X (MRR: 0.3114, NDCG@10: 0.3440, HR@10: 0.4937), Y (MRR: 0.3972, NDCG@10: 0.4378, HR@10: 0.5880)
+client: 7,  val round:13, time: 204.820797(s), X (MRR: 0.3206, NDCG@10: 0.3618, HR@10: 0.5356), Y (MRR: 0.3665, NDCG@10: 0.4092, HR@10: 0.5784)
+client: 8,  val round:13, time: 205.242373(s), X (MRR: 0.3016, NDCG@10: 0.3371, HR@10: 0.4900), Y (MRR: 0.3457, NDCG@10: 0.3752, HR@10: 0.5024)
+client: 9,  val round:13, time: 205.463379(s), X (MRR: 0.2804, NDCG@10: 0.3276, HR@10: 0.5174), Y (MRR: 0.3720, NDCG@10: 0.4038, HR@10: 0.5349)
+average round:13, time: 205.463447(s), X (MRR: 0.3044, NDCG@10: 0.3453, HR@10: 0.5176), Y (MRR: 0.3735, NDCG@10: 0.4089, HR@10: 0.5529)
+client: 0, 2022-12-06 05:51:56.493203: step 393/600 (round 14/20), loss = 3.711767 (1.153 sec/epoch), lr: 0.001000
+mi: 0.20358940176665785
+client: 1, 2022-12-06 05:51:57.639003: step 396/600 (round 14/20), loss = 3.791729 (1.146 sec/epoch), lr: 0.001000
+mi: 0.18135230652987958
+client: 2, 2022-12-06 05:51:58.813166: step 399/600 (round 14/20), loss = 3.722856 (1.174 sec/epoch), lr: 0.001000
+mi: 0.17573628686368467
+client: 3, 2022-12-06 05:52:00.002071: step 402/600 (round 14/20), loss = 3.685671 (1.189 sec/epoch), lr: 0.001000
+mi: 0.17654306292533875
+client: 4, 2022-12-06 05:52:01.168531: step 405/600 (round 14/20), loss = 3.667113 (1.166 sec/epoch), lr: 0.001000
+mi: 0.17987444624304774
+client: 5, 2022-12-06 05:52:02.337917: step 408/600 (round 14/20), loss = 3.760051 (1.169 sec/epoch), lr: 0.001000
+mi: 0.18656663149595265
+client: 6, 2022-12-06 05:52:03.497903: step 411/600 (round 14/20), loss = 3.717155 (1.160 sec/epoch), lr: 0.001000
+mi: 0.1901489406824112
+client: 7, 2022-12-06 05:52:04.637440: step 414/600 (round 14/20), loss = 3.708507 (1.139 sec/epoch), lr: 0.001000
+mi: 0.18517302423715598
+client: 8, 2022-12-06 05:52:05.795806: step 417/600 (round 14/20), loss = 3.751544 (1.158 sec/epoch), lr: 0.001000
+mi: 0.201560965180397
+client: 9, 2022-12-06 05:52:06.943349: step 420/600 (round 14/20), loss = 3.732133 (1.147 sec/epoch), lr: 0.001000
+mi: 0.1883542869240046
+Evaluating on dev set...
+client: 0,  val round:14, time: 217.315547(s), X (MRR: 0.3488, NDCG@10: 0.3972, HR@10: 0.5874), Y (MRR: 0.3589, NDCG@10: 0.4050, HR@10: 0.5829)
+client: 1,  val round:14, time: 217.737935(s), X (MRR: 0.2850, NDCG@10: 0.3232, HR@10: 0.4891), Y (MRR: 0.3574, NDCG@10: 0.3904, HR@10: 0.5300)
+client: 2,  val round:14, time: 218.162817(s), X (MRR: 0.3181, NDCG@10: 0.3577, HR@10: 0.5293), Y (MRR: 0.3598, NDCG@10: 0.3862, HR@10: 0.5075)
+client: 3,  val round:14, time: 218.382359(s), X (MRR: 0.2967, NDCG@10: 0.3412, HR@10: 0.5233), Y (MRR: 0.3809, NDCG@10: 0.4123, HR@10: 0.5441)
+client: 4,  val round:14, time: 218.601971(s), X (MRR: 0.2845, NDCG@10: 0.3238, HR@10: 0.4928), Y (MRR: 0.3931, NDCG@10: 0.4282, HR@10: 0.5692)
+client: 5,  val round:14, time: 219.028553(s), X (MRR: 0.2905, NDCG@10: 0.3372, HR@10: 0.5271), Y (MRR: 0.3714, NDCG@10: 0.4013, HR@10: 0.5317)
+client: 6,  val round:14, time: 219.245790(s), X (MRR: 0.3074, NDCG@10: 0.3386, HR@10: 0.4835), Y (MRR: 0.3965, NDCG@10: 0.4386, HR@10: 0.5926)
+client: 7,  val round:14, time: 219.464042(s), X (MRR: 0.3164, NDCG@10: 0.3588, HR@10: 0.5356), Y (MRR: 0.3626, NDCG@10: 0.4064, HR@10: 0.5784)
+client: 8,  val round:14, time: 219.685084(s), X (MRR: 0.3005, NDCG@10: 0.3367, HR@10: 0.4925), Y (MRR: 0.3359, NDCG@10: 0.3645, HR@10: 0.4929)
+client: 9,  val round:14, time: 219.907026(s), X (MRR: 0.2720, NDCG@10: 0.3184, HR@10: 0.5075), Y (MRR: 0.3672, NDCG@10: 0.3989, HR@10: 0.5302)
+average round:14, time: 219.907096(s), X (MRR: 0.3020, NDCG@10: 0.3433, HR@10: 0.5168), Y (MRR: 0.3684, NDCG@10: 0.4032, HR@10: 0.5460)
+client: 0, 2022-12-06 05:52:10.946289: step 423/600 (round 15/20), loss = 3.357601 (1.163 sec/epoch), lr: 0.001000
+mi: 0.1569111924618483
+client: 1, 2022-12-06 05:52:12.124152: step 426/600 (round 15/20), loss = 3.420634 (1.178 sec/epoch), lr: 0.001000
+mi: 0.16768919751048092
+client: 2, 2022-12-06 05:52:13.263510: step 429/600 (round 15/20), loss = 3.355502 (1.139 sec/epoch), lr: 0.001000
+mi: 0.1414736691862345
+client: 3, 2022-12-06 05:52:14.436856: step 432/600 (round 15/20), loss = 3.326416 (1.173 sec/epoch), lr: 0.001000
+mi: 0.15131551623344422
+client: 4, 2022-12-06 05:52:15.594353: step 435/600 (round 15/20), loss = 3.309955 (1.157 sec/epoch), lr: 0.001000
+mi: 0.1660805925726891
+client: 5, 2022-12-06 05:52:16.768453: step 438/600 (round 15/20), loss = 3.393029 (1.174 sec/epoch), lr: 0.001000
+mi: 0.16024961918592454
+client: 6, 2022-12-06 05:52:17.931394: step 441/600 (round 15/20), loss = 3.344661 (1.163 sec/epoch), lr: 0.001000
+mi: 0.1589085750281811
+client: 7, 2022-12-06 05:52:19.111634: step 444/600 (round 15/20), loss = 3.332866 (1.180 sec/epoch), lr: 0.001000
+mi: 0.16260502636432647
+client: 8, 2022-12-06 05:52:20.274962: step 447/600 (round 15/20), loss = 3.381475 (1.163 sec/epoch), lr: 0.001000
+mi: 0.17421192526817322
+client: 9, 2022-12-06 05:52:21.447840: step 450/600 (round 15/20), loss = 3.368478 (1.173 sec/epoch), lr: 0.001000
+mi: 0.16332105807960035
+Evaluating on dev set...
+client: 0,  val round:15, time: 231.822639(s), X (MRR: 0.3496, NDCG@10: 0.3955, HR@10: 0.5777), Y (MRR: 0.3632, NDCG@10: 0.4041, HR@10: 0.5678)
+client: 1,  val round:15, time: 232.251417(s), X (MRR: 0.2869, NDCG@10: 0.3275, HR@10: 0.4988), Y (MRR: 0.3603, NDCG@10: 0.3909, HR@10: 0.5250)
+client: 2,  val round:15, time: 232.683536(s), X (MRR: 0.3135, NDCG@10: 0.3550, HR@10: 0.5317), Y (MRR: 0.3523, NDCG@10: 0.3794, HR@10: 0.5025)
+client: 3,  val round:15, time: 232.897381(s), X (MRR: 0.2906, NDCG@10: 0.3307, HR@10: 0.5037), Y (MRR: 0.3748, NDCG@10: 0.4077, HR@10: 0.5441)
+client: 4,  val round:15, time: 233.110070(s), X (MRR: 0.2835, NDCG@10: 0.3238, HR@10: 0.4952), Y (MRR: 0.3823, NDCG@10: 0.4178, HR@10: 0.5590)
+client: 5,  val round:15, time: 233.324662(s), X (MRR: 0.2897, NDCG@10: 0.3363, HR@10: 0.5246), Y (MRR: 0.3700, NDCG@10: 0.3976, HR@10: 0.5220)
+client: 6,  val round:15, time: 233.543227(s), X (MRR: 0.3043, NDCG@10: 0.3349, HR@10: 0.4785), Y (MRR: 0.3918, NDCG@10: 0.4349, HR@10: 0.5926)
+client: 7,  val round:15, time: 233.757551(s), X (MRR: 0.3161, NDCG@10: 0.3585, HR@10: 0.5356), Y (MRR: 0.3547, NDCG@10: 0.4005, HR@10: 0.5784)
+client: 8,  val round:15, time: 233.969431(s), X (MRR: 0.2994, NDCG@10: 0.3382, HR@10: 0.5000), Y (MRR: 0.3293, NDCG@10: 0.3595, HR@10: 0.4929)
+client: 9,  val round:15, time: 234.189221(s), X (MRR: 0.2686, NDCG@10: 0.3148, HR@10: 0.5025), Y (MRR: 0.3636, NDCG@10: 0.3922, HR@10: 0.5163)
+average round:15, time: 234.189307(s), X (MRR: 0.3002, NDCG@10: 0.3415, HR@10: 0.5148), Y (MRR: 0.3642, NDCG@10: 0.3984, HR@10: 0.5401)
+client: 0, 2022-12-06 05:52:25.225341: step 453/600 (round 16/20), loss = 3.013762 (1.160 sec/epoch), lr: 0.001000
+mi: 0.14359501302242283
+client: 1, 2022-12-06 05:52:26.392053: step 456/600 (round 16/20), loss = 3.085576 (1.167 sec/epoch), lr: 0.001000
+mi: 0.15243346765637403
+client: 2, 2022-12-06 05:52:27.568471: step 459/600 (round 16/20), loss = 3.035441 (1.176 sec/epoch), lr: 0.001000
+mi: 0.13115454092621806
+client: 3, 2022-12-06 05:52:28.745841: step 462/600 (round 16/20), loss = 2.993473 (1.177 sec/epoch), lr: 0.001000
+mi: 0.14197406172752383
+client: 4, 2022-12-06 05:52:29.922174: step 465/600 (round 16/20), loss = 2.977632 (1.176 sec/epoch), lr: 0.001000
+mi: 0.14217792078852656
+client: 5, 2022-12-06 05:52:31.083343: step 468/600 (round 16/20), loss = 3.063193 (1.161 sec/epoch), lr: 0.001000
+mi: 0.14289868250489238
+client: 6, 2022-12-06 05:52:32.270057: step 471/600 (round 16/20), loss = 3.015969 (1.187 sec/epoch), lr: 0.001000
+mi: 0.14874286502599718
+client: 7, 2022-12-06 05:52:33.433622: step 474/600 (round 16/20), loss = 3.011617 (1.163 sec/epoch), lr: 0.001000
+mi: 0.14975341539829973
+client: 8, 2022-12-06 05:52:34.625130: step 477/600 (round 16/20), loss = 3.047052 (1.191 sec/epoch), lr: 0.001000
+mi: 0.15352933220565318
+client: 9, 2022-12-06 05:52:35.822185: step 480/600 (round 16/20), loss = 3.052059 (1.197 sec/epoch), lr: 0.001000
+mi: 0.14669264182448388
+Evaluating on dev set...
+client: 0,  val round:16, time: 246.200533(s), X (MRR: 0.3506, NDCG@10: 0.3974, HR@10: 0.5801), Y (MRR: 0.3687, NDCG@10: 0.4087, HR@10: 0.5678)
+client: 1,  val round:16, time: 246.626745(s), X (MRR: 0.2856, NDCG@10: 0.3247, HR@10: 0.4915), Y (MRR: 0.3619, NDCG@10: 0.3933, HR@10: 0.5300)
+client: 2,  val round:16, time: 246.845029(s), X (MRR: 0.3149, NDCG@10: 0.3549, HR@10: 0.5268), Y (MRR: 0.3504, NDCG@10: 0.3776, HR@10: 0.5025)
+client: 3,  val round:16, time: 247.063079(s), X (MRR: 0.2899, NDCG@10: 0.3254, HR@10: 0.4865), Y (MRR: 0.3774, NDCG@10: 0.4111, HR@10: 0.5490)
+client: 4,  val round:16, time: 247.283521(s), X (MRR: 0.2774, NDCG@10: 0.3146, HR@10: 0.4784), Y (MRR: 0.3834, NDCG@10: 0.4198, HR@10: 0.5641)
+client: 5,  val round:16, time: 247.503296(s), X (MRR: 0.2872, NDCG@10: 0.3306, HR@10: 0.5099), Y (MRR: 0.3628, NDCG@10: 0.3901, HR@10: 0.5122)
+client: 6,  val round:16, time: 247.726322(s), X (MRR: 0.2966, NDCG@10: 0.3288, HR@10: 0.4759), Y (MRR: 0.3824, NDCG@10: 0.4248, HR@10: 0.5833)
+client: 7,  val round:16, time: 247.942075(s), X (MRR: 0.3065, NDCG@10: 0.3498, HR@10: 0.5307), Y (MRR: 0.3449, NDCG@10: 0.3957, HR@10: 0.5882)
+client: 8,  val round:16, time: 248.157610(s), X (MRR: 0.2956, NDCG@10: 0.3320, HR@10: 0.4875), Y (MRR: 0.3294, NDCG@10: 0.3569, HR@10: 0.4834)
+client: 9,  val round:16, time: 248.376627(s), X (MRR: 0.2634, NDCG@10: 0.3109, HR@10: 0.5025), Y (MRR: 0.3527, NDCG@10: 0.3891, HR@10: 0.5349)
+average round:16, time: 248.376697(s), X (MRR: 0.2968, NDCG@10: 0.3369, HR@10: 0.5070), Y (MRR: 0.3614, NDCG@10: 0.3967, HR@10: 0.5416)
+client: 0, 2022-12-06 05:52:39.466094: step 483/600 (round 17/20), loss = 2.737850 (1.213 sec/epoch), lr: 0.001000
+mi: 0.12517549544572834
+client: 1, 2022-12-06 05:52:40.657237: step 486/600 (round 17/20), loss = 2.803437 (1.191 sec/epoch), lr: 0.001000
+mi: 0.12990379706025126
+client: 2, 2022-12-06 05:52:41.857489: step 489/600 (round 17/20), loss = 2.752678 (1.200 sec/epoch), lr: 0.001000
+mi: 0.12628518231213096
+client: 3, 2022-12-06 05:52:43.041473: step 492/600 (round 17/20), loss = 2.724858 (1.184 sec/epoch), lr: 0.001000
+mi: 0.1261024355888367
+client: 4, 2022-12-06 05:52:44.232350: step 495/600 (round 17/20), loss = 2.694027 (1.191 sec/epoch), lr: 0.001000
+mi: 0.12498804219067099
+client: 5, 2022-12-06 05:52:45.413440: step 498/600 (round 17/20), loss = 2.766038 (1.181 sec/epoch), lr: 0.001000
+mi: 0.12480320706963542
+client: 6, 2022-12-06 05:52:46.602970: step 501/600 (round 17/20), loss = 2.730748 (1.189 sec/epoch), lr: 0.001000
+mi: 0.1501684330403805
+client: 7, 2022-12-06 05:52:47.800999: step 504/600 (round 17/20), loss = 2.728800 (1.198 sec/epoch), lr: 0.001000
+mi: 0.14048824645578864
+client: 8, 2022-12-06 05:52:49.009291: step 507/600 (round 17/20), loss = 2.770486 (1.208 sec/epoch), lr: 0.001000
+mi: 0.1374080665409565
+client: 9, 2022-12-06 05:52:50.192118: step 510/600 (round 17/20), loss = 2.750618 (1.183 sec/epoch), lr: 0.001000
+mi: 0.13481249883770943
+Evaluating on dev set...
+client: 0,  val round:17, time: 260.564414(s), X (MRR: 0.3542, NDCG@10: 0.3997, HR@10: 0.5777), Y (MRR: 0.3769, NDCG@10: 0.4125, HR@10: 0.5578)
+client: 1,  val round:17, time: 260.984822(s), X (MRR: 0.2839, NDCG@10: 0.3215, HR@10: 0.4842), Y (MRR: 0.3578, NDCG@10: 0.3873, HR@10: 0.5200)
+client: 2,  val round:17, time: 261.207285(s), X (MRR: 0.3126, NDCG@10: 0.3479, HR@10: 0.5073), Y (MRR: 0.3431, NDCG@10: 0.3705, HR@10: 0.4975)
+client: 3,  val round:17, time: 261.424179(s), X (MRR: 0.2850, NDCG@10: 0.3217, HR@10: 0.4840), Y (MRR: 0.3695, NDCG@10: 0.4040, HR@10: 0.5441)
+client: 4,  val round:17, time: 261.638802(s), X (MRR: 0.2640, NDCG@10: 0.3012, HR@10: 0.4663), Y (MRR: 0.3760, NDCG@10: 0.4128, HR@10: 0.5590)
+client: 5,  val round:17, time: 261.851238(s), X (MRR: 0.2847, NDCG@10: 0.3286, HR@10: 0.5074), Y (MRR: 0.3527, NDCG@10: 0.3788, HR@10: 0.4976)
+client: 6,  val round:17, time: 262.062907(s), X (MRR: 0.2936, NDCG@10: 0.3258, HR@10: 0.4709), Y (MRR: 0.3802, NDCG@10: 0.4166, HR@10: 0.5602)
+client: 7,  val round:17, time: 262.277164(s), X (MRR: 0.3060, NDCG@10: 0.3487, HR@10: 0.5283), Y (MRR: 0.3372, NDCG@10: 0.3874, HR@10: 0.5784)
+client: 8,  val round:17, time: 262.490836(s), X (MRR: 0.2941, NDCG@10: 0.3268, HR@10: 0.4725), Y (MRR: 0.3240, NDCG@10: 0.3492, HR@10: 0.4692)
+client: 9,  val round:17, time: 262.709273(s), X (MRR: 0.2584, NDCG@10: 0.3079, HR@10: 0.5050), Y (MRR: 0.3495, NDCG@10: 0.3852, HR@10: 0.5302)
+average round:17, time: 262.709341(s), X (MRR: 0.2937, NDCG@10: 0.3330, HR@10: 0.5004), Y (MRR: 0.3567, NDCG@10: 0.3904, HR@10: 0.5314)
+client: 0, 2022-12-06 05:52:53.732506: step 513/600 (round 18/20), loss = 2.486334 (1.147 sec/epoch), lr: 0.001000
+mi: 0.12844079546630385
+client: 1, 2022-12-06 05:52:54.885015: step 516/600 (round 18/20), loss = 2.548779 (1.152 sec/epoch), lr: 0.001000
+mi: 0.12324328422546388
+client: 2, 2022-12-06 05:52:56.058837: step 519/600 (round 18/20), loss = 2.500281 (1.174 sec/epoch), lr: 0.001000
+mi: 0.10970864593982697
+client: 3, 2022-12-06 05:52:57.220834: step 522/600 (round 18/20), loss = 2.469172 (1.162 sec/epoch), lr: 0.001000
+mi: 0.10988743305206299
+client: 4, 2022-12-06 05:52:58.372636: step 525/600 (round 18/20), loss = 2.446385 (1.152 sec/epoch), lr: 0.001000
+mi: 0.11206224001944066
+client: 5, 2022-12-06 05:52:59.541453: step 528/600 (round 18/20), loss = 2.511216 (1.169 sec/epoch), lr: 0.001000
+mi: 0.1183776993304491
+client: 6, 2022-12-06 05:53:00.716070: step 531/600 (round 18/20), loss = 2.476798 (1.174 sec/epoch), lr: 0.001000
+mi: 0.1208875644952059
+client: 7, 2022-12-06 05:53:01.887540: step 534/600 (round 18/20), loss = 2.484171 (1.171 sec/epoch), lr: 0.001000
+mi: 0.13156421668827536
+client: 8, 2022-12-06 05:53:03.057856: step 537/600 (round 18/20), loss = 2.513001 (1.170 sec/epoch), lr: 0.001000
+mi: 0.13305326327681544
+client: 9, 2022-12-06 05:53:04.212363: step 540/600 (round 18/20), loss = 2.505732 (1.154 sec/epoch), lr: 0.001000
+mi: 0.13660781867802144
+Evaluating on dev set...
+client: 0,  val round:18, time: 274.597340(s), X (MRR: 0.3568, NDCG@10: 0.4032, HR@10: 0.5825), Y (MRR: 0.3828, NDCG@10: 0.4146, HR@10: 0.5477)
+client: 1,  val round:18, time: 275.034066(s), X (MRR: 0.2816, NDCG@10: 0.3193, HR@10: 0.4818), Y (MRR: 0.3577, NDCG@10: 0.3831, HR@10: 0.5050)
+client: 2,  val round:18, time: 275.250174(s), X (MRR: 0.3065, NDCG@10: 0.3423, HR@10: 0.5024), Y (MRR: 0.3237, NDCG@10: 0.3549, HR@10: 0.4925)
+client: 3,  val round:18, time: 275.471555(s), X (MRR: 0.2813, NDCG@10: 0.3156, HR@10: 0.4717), Y (MRR: 0.3586, NDCG@10: 0.3927, HR@10: 0.5343)
+client: 4,  val round:18, time: 275.691262(s), X (MRR: 0.2603, NDCG@10: 0.2979, HR@10: 0.4639), Y (MRR: 0.3665, NDCG@10: 0.4085, HR@10: 0.5692)
+client: 5,  val round:18, time: 275.910846(s), X (MRR: 0.2835, NDCG@10: 0.3272, HR@10: 0.5049), Y (MRR: 0.3396, NDCG@10: 0.3689, HR@10: 0.4976)
+client: 6,  val round:18, time: 276.134448(s), X (MRR: 0.2865, NDCG@10: 0.3194, HR@10: 0.4658), Y (MRR: 0.3735, NDCG@10: 0.4112, HR@10: 0.5602)
+client: 7,  val round:18, time: 276.354345(s), X (MRR: 0.3043, NDCG@10: 0.3479, HR@10: 0.5283), Y (MRR: 0.3356, NDCG@10: 0.3817, HR@10: 0.5637)
+client: 8,  val round:18, time: 276.573394(s), X (MRR: 0.2867, NDCG@10: 0.3180, HR@10: 0.4600), Y (MRR: 0.3214, NDCG@10: 0.3435, HR@10: 0.4550)
+client: 9,  val round:18, time: 276.796936(s), X (MRR: 0.2592, NDCG@10: 0.3075, HR@10: 0.5000), Y (MRR: 0.3436, NDCG@10: 0.3784, HR@10: 0.5209)
+average round:18, time: 276.797005(s), X (MRR: 0.2907, NDCG@10: 0.3298, HR@10: 0.4961), Y (MRR: 0.3503, NDCG@10: 0.3838, HR@10: 0.5246)
+client: 0, 2022-12-06 05:53:07.839594: step 543/600 (round 19/20), loss = 2.253912 (1.166 sec/epoch), lr: 0.001000
+mi: 0.11129697747528555
+client: 1, 2022-12-06 05:53:08.992159: step 546/600 (round 19/20), loss = 2.322149 (1.152 sec/epoch), lr: 0.001000
+mi: 0.11993922330439093
+client: 2, 2022-12-06 05:53:10.141880: step 549/600 (round 19/20), loss = 2.262509 (1.150 sec/epoch), lr: 0.001000
+mi: 0.09844635762274266
+client: 3, 2022-12-06 05:53:11.313336: step 552/600 (round 19/20), loss = 2.239630 (1.171 sec/epoch), lr: 0.001000
+mi: 0.09898322485387327
+client: 4, 2022-12-06 05:53:12.460390: step 555/600 (round 19/20), loss = 2.231703 (1.147 sec/epoch), lr: 0.001000
+mi: 0.11301717534661294
+client: 5, 2022-12-06 05:53:13.628927: step 558/600 (round 19/20), loss = 2.292060 (1.168 sec/epoch), lr: 0.001000
+mi: 0.0980026734992862
+client: 6, 2022-12-06 05:53:14.769943: step 561/600 (round 19/20), loss = 2.273976 (1.141 sec/epoch), lr: 0.001000
+mi: 0.11608221940696241
+client: 7, 2022-12-06 05:53:15.926406: step 564/600 (round 19/20), loss = 2.251542 (1.156 sec/epoch), lr: 0.001000
+mi: 0.11349807772785427
+client: 8, 2022-12-06 05:53:17.076415: step 567/600 (round 19/20), loss = 2.286308 (1.150 sec/epoch), lr: 0.001000
+mi: 0.10707289669662716
+client: 9, 2022-12-06 05:53:18.249182: step 570/600 (round 19/20), loss = 2.296829 (1.173 sec/epoch), lr: 0.001000
+mi: 0.1153860190883279
+Evaluating on dev set...
+client: 0,  val round:19, time: 288.625477(s), X (MRR: 0.3577, NDCG@10: 0.4032, HR@10: 0.5801), Y (MRR: 0.3835, NDCG@10: 0.4140, HR@10: 0.5427)
+client: 1,  val round:19, time: 289.067119(s), X (MRR: 0.2806, NDCG@10: 0.3157, HR@10: 0.4720), Y (MRR: 0.3438, NDCG@10: 0.3743, HR@10: 0.5100)
+client: 2,  val round:19, time: 289.287352(s), X (MRR: 0.3077, NDCG@10: 0.3427, HR@10: 0.5000), Y (MRR: 0.3274, NDCG@10: 0.3593, HR@10: 0.4975)
+client: 3,  val round:19, time: 289.499609(s), X (MRR: 0.2827, NDCG@10: 0.3163, HR@10: 0.4693), Y (MRR: 0.3530, NDCG@10: 0.3901, HR@10: 0.5392)
+client: 4,  val round:19, time: 289.712061(s), X (MRR: 0.2533, NDCG@10: 0.2928, HR@10: 0.4639), Y (MRR: 0.3578, NDCG@10: 0.4010, HR@10: 0.5641)
+client: 5,  val round:19, time: 289.928043(s), X (MRR: 0.2838, NDCG@10: 0.3278, HR@10: 0.5049), Y (MRR: 0.3282, NDCG@10: 0.3533, HR@10: 0.4732)
+client: 6,  val round:19, time: 290.144674(s), X (MRR: 0.2784, NDCG@10: 0.3130, HR@10: 0.4633), Y (MRR: 0.3680, NDCG@10: 0.4055, HR@10: 0.5556)
+client: 7,  val round:19, time: 290.363200(s), X (MRR: 0.2995, NDCG@10: 0.3395, HR@10: 0.5111), Y (MRR: 0.3361, NDCG@10: 0.3835, HR@10: 0.5686)
+client: 8,  val round:19, time: 290.576415(s), X (MRR: 0.2848, NDCG@10: 0.3166, HR@10: 0.4600), Y (MRR: 0.3174, NDCG@10: 0.3420, HR@10: 0.4597)
+client: 9,  val round:19, time: 290.792085(s), X (MRR: 0.2616, NDCG@10: 0.3117, HR@10: 0.5075), Y (MRR: 0.3396, NDCG@10: 0.3718, HR@10: 0.5070)
+average round:19, time: 290.792178(s), X (MRR: 0.2890, NDCG@10: 0.3279, HR@10: 0.4932), Y (MRR: 0.3455, NDCG@10: 0.3795, HR@10: 0.5218)
+client: 0, 2022-12-06 05:53:21.829393: step 573/600 (round 20/20), loss = 2.055354 (1.161 sec/epoch), lr: 0.001000
+mi: 0.09741119481623173
+client: 1, 2022-12-06 05:53:22.994698: step 576/600 (round 20/20), loss = 2.108260 (1.165 sec/epoch), lr: 0.001000
+mi: 0.10873790066689255
+client: 2, 2022-12-06 05:53:24.169885: step 579/600 (round 20/20), loss = 2.075221 (1.175 sec/epoch), lr: 0.001000
+mi: 0.09108033273369076
+client: 3, 2022-12-06 05:53:25.318185: step 582/600 (round 20/20), loss = 2.048851 (1.148 sec/epoch), lr: 0.001000
+mi: 0.10571320969611409
+client: 4, 2022-12-06 05:53:26.464956: step 585/600 (round 20/20), loss = 2.027884 (1.147 sec/epoch), lr: 0.001000
+mi: 0.09838073179125788
+client: 5, 2022-12-06 05:53:27.612802: step 588/600 (round 20/20), loss = 2.110047 (1.148 sec/epoch), lr: 0.001000
+mi: 0.10702129136770965
+client: 6, 2022-12-06 05:53:28.764271: step 591/600 (round 20/20), loss = 2.064586 (1.151 sec/epoch), lr: 0.001000
+mi: 0.10753150358796122
+client: 7, 2022-12-06 05:53:29.926424: step 594/600 (round 20/20), loss = 2.047701 (1.162 sec/epoch), lr: 0.001000
+mi: 0.10569490529596808
+client: 8, 2022-12-06 05:53:31.068737: step 597/600 (round 20/20), loss = 2.079845 (1.142 sec/epoch), lr: 0.001000
+mi: 0.11307151019573213
+client: 9, 2022-12-06 05:53:32.225384: step 600/600 (round 20/20), loss = 2.088571 (1.156 sec/epoch), lr: 0.001000
+mi: 0.09777232035994532
+Evaluating on dev set...
+client: 0,  val round:20, time: 302.597728(s), X (MRR: 0.3591, NDCG@10: 0.4018, HR@10: 0.5704), Y (MRR: 0.3940, NDCG@10: 0.4187, HR@10: 0.5327)
+client: 1,  val round:20, time: 303.021848(s), X (MRR: 0.2774, NDCG@10: 0.3116, HR@10: 0.4647), Y (MRR: 0.3440, NDCG@10: 0.3758, HR@10: 0.5150)
+client: 2,  val round:20, time: 303.237197(s), X (MRR: 0.3009, NDCG@10: 0.3371, HR@10: 0.4976), Y (MRR: 0.3228, NDCG@10: 0.3559, HR@10: 0.4975)
+client: 3,  val round:20, time: 303.450667(s), X (MRR: 0.2807, NDCG@10: 0.3115, HR@10: 0.4570), Y (MRR: 0.3445, NDCG@10: 0.3842, HR@10: 0.5392)
+client: 4,  val round:20, time: 303.665270(s), X (MRR: 0.2530, NDCG@10: 0.2928, HR@10: 0.4639), Y (MRR: 0.3460, NDCG@10: 0.3963, HR@10: 0.5795)
+client: 5,  val round:20, time: 303.878940(s), X (MRR: 0.2838, NDCG@10: 0.3251, HR@10: 0.4951), Y (MRR: 0.3237, NDCG@10: 0.3527, HR@10: 0.4829)
+client: 6,  val round:20, time: 304.094244(s), X (MRR: 0.2801, NDCG@10: 0.3135, HR@10: 0.4608), Y (MRR: 0.3653, NDCG@10: 0.4009, HR@10: 0.5463)
+client: 7,  val round:20, time: 304.310787(s), X (MRR: 0.2879, NDCG@10: 0.3270, HR@10: 0.4963), Y (MRR: 0.3334, NDCG@10: 0.3818, HR@10: 0.5686)
+client: 8,  val round:20, time: 304.528656(s), X (MRR: 0.2801, NDCG@10: 0.3132, HR@10: 0.4600), Y (MRR: 0.3193, NDCG@10: 0.3448, HR@10: 0.4645)
+client: 9,  val round:20, time: 304.749328(s), X (MRR: 0.2609, NDCG@10: 0.3092, HR@10: 0.5000), Y (MRR: 0.3416, NDCG@10: 0.3735, HR@10: 0.5070)
+average round:20, time: 304.749395(s), X (MRR: 0.2864, NDCG@10: 0.3243, HR@10: 0.4866), Y (MRR: 0.3435, NDCG@10: 0.3785, HR@10: 0.5233)
+[0.29883837 0.30867553 0.34135597 0.19199837 0.41753121 0.51807949]
+[0.36467085 0.37714815 0.40249851 0.26482644 0.47627555 0.55467471]
